@@ -69,9 +69,9 @@ public class RechercheVilleTest {
         RechercheVille rechercheVille = new RechercheVille();
 
         // Act
-        List<String> result = rechercheVille.rechercher("*");
+        List<String> result  = rechercheVille.rechercher("*");
 
         // Assert
-        Assert.assertEquals(15, result.size());
+        Assert.assertEquals(16, result.size());
     }
 }

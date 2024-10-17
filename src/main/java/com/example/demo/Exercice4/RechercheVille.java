@@ -15,6 +15,11 @@ public class RechercheVille {
             "Bangkok", "Hong Kong", "Dubaï", "Rome", "Istanbul");
 
     public List<String> rechercher(String mot) throws NotFoundException {
+
+        if ("*".equals(mot)) {
+            return villes;
+        }
+
         if (mot.length() < 2) {
             throw new NotFoundException("Doit contenir au moins 2 caractères.");
         }
