@@ -28,7 +28,7 @@ public class RechercheVilleTest {
         //Arrange
         RechercheVille rechercheVille = new RechercheVille();
         //Act
-        List<String> result = rechercheVille.rechercher("va");
+        List<String> result = rechercheVille.rechercher("Va");
 
         //Assert
         Assert.assertTrue(result.contains("Valence"));

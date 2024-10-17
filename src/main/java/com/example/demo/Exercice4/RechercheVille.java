@@ -4,7 +4,9 @@ import org.apache.commons.lang3.NotImplementedException;
 import org.webjars.NotFoundException;
 
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RechercheVille {
     private List<String> villes = List.of(
@@ -16,6 +18,13 @@ public class RechercheVille {
         if (mot.length() < 2) {
             throw new NotFoundException("Doit contenir au moins 2 caractères.");
         }
-      return villes;
+
+        List<String> villesFiltrees = new ArrayList<>();
+        for (String ville : villes) {
+            if (ville.startsWith(mot)) {
+                villesFiltrees.add(ville);
+            }
+        }
+        return villesFiltrees;
     }
 }
