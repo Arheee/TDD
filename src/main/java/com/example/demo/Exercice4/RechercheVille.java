@@ -3,6 +3,7 @@ package com.example.demo.Exercice4;
 import org.apache.commons.lang3.NotImplementedException;
 import org.webjars.NotFoundException;
 
+
 import java.util.List;
 
 public class RechercheVille {
@@ -12,7 +13,9 @@ public class RechercheVille {
             "Bangkok", "Hong Kong", "Dubaï", "Rome", "Istanbul");
 
     public List<String> rechercher(String mot) throws NotFoundException {
-        return villes;
-      //  throw new NotImplementedException();
+        if (mot.length() < 2) {
+            throw new NotFoundException("Doit contenir au moins 2 caractères.");
+        }
+      return villes;
     }
 }
